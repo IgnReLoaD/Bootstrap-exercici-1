@@ -8,11 +8,11 @@
     <meta name="keywords"    content="bootstrap i navbar">
     <meta name="description" content="IT Academy - modul 6 Bootstrap"> 
 
-    <!-- Bootstrap CSS ... amb CDN (enllaços) -- no utilitzo -->
+    <!-- Bootstrap CSS ... amb CDN (enllaços) --  -->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
     
-    <!-- Bootstrap CSS ... amb CLI (fitxers) -- si utilitzo -->
+    <!-- Bootstrap CSS ... amb CLI (fitxers) --  -->
     <!-- <link rel="stylesheet" type="text/css" href="styles/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles/css/bootstrap.min.css"> -->
     <!-- aquest script src aniria AL FINAL del html, però per ESTUDIAR el nivell basic el deixo aqui -->
@@ -38,49 +38,41 @@
     <!-- NAV BAR de Bootstrap -->
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
     <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="assets/logo.png" class="logo-brand" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- <i class="icon ion-md-menu"></i> -->
+        <a id="titol">TOT HO TALLO</a>
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <ion-icon name="menu-outline"></ion-icon>
           <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- alinear a la esquerra   -->
-          <ul class="navbar-nav mr-auto">
-          <!-- alinear a la dreta      -->
+
+          <!-- alinear a la esquerra ML-AUTO  -->
+          <ul class="navbar-nav ml-auto">
+          
+          <!-- abans estava a la dreta MR  -->
           <!-- <ul class="navbar-nav mr-auto"> -->
-            <li class="nav-item active">
+
+            <!-- <li class="nav-item active"> -->
+              <li class="nav-item">              
+
               <a class="nav-link" href="#">Inici 
                 <!-- <span class="sr-only">(current)</span> -->
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Qui som?</a>
+              <a class="nav-link" href="#bones">Qui som?</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Serveis
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Venda llenya</a>
-                <a class="dropdown-item" href="#">Parcela privada</a>
-                <a class="dropdown-item" href="#">Tala difícil accés</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Recuperació boscos</a>
-              </div>
+              <a class="nav-link" href="#serveis">Serveis</a>              
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Contactar</a>
+              <a class="nav-link" href="#contactar">Contactar</a>
             </li>
           </ul>
-
-          <!-- formulari per SEARCH de navbar - NO utilitzo -->
-          <!-- <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
         </div>
       </div>
     </nav>
@@ -88,15 +80,22 @@
     <section id="presenta">
       <div class="container">
         <div class="content-center shaded-box">
-          <h1>Tothotallo</h1>
+          <h1>Tot ho tallo</h1>
           <h2>Serveis forestals al Vallès Occ.</h2>
-          <p>empresa familiar amb més de 100 anys d'experiència. </p>
-          <p>Fins a 3 generacions ens avalen.</p>
+          <p>Som una empresa familiar amb més de 100 anys d'experiència.</p>
+          <p>Fins a 3 generacions ens avalen, amb magatzem a Rubí.</p>
         </div>
       </div>
     </section>
 
     <section id="portfolio">
+      <a name="serveis"><p>Et volem ajudar, com? Doncs mira...</p></a>
+      <p>&nbsp</p>
+      <p>&nbsp</p>
+      <p>&nbsp</p>
+      <p>&nbsp</p>      
+      <p>&nbsp</p>
+      <p>&nbsp</p>       
       <div class="container-fluid">
         <div class="content-center">
           <h2>Els nostres serveis</h2>
@@ -119,7 +118,7 @@
                   <h2>Venda de llenya</h2>
                 </a>
                 <a href="#">
-                  <p>Entrega a domicili</p>
+                  <p>Set-Mar: 8h-13h i 15h-18h / Abr-Jul: 8h-13h / Ago: tancat</p>
                 </a>
               </div>
               <img src="assets/portfolio-01.jpg" class="img-fluid" alt="portfolio 1">
@@ -183,8 +182,10 @@
         </div>
 
         <div class="text-center topmargin-sm">
-          <p>Estas apunt per descobrir el nostre potencial?</p>
-          <a href="#">més informació</a>
+          <a name="bones"><p>Estas apunt per descobrir el nostre potencial?</p></a>
+          <p>&nbsp</p>
+          <p>&nbsp</p>
+          <p>&nbsp</p>
         </div>
         
       </div>
@@ -195,13 +196,67 @@
         <div class="content-center">
           <h2>Estàs en bones mans.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Reprehenderit quam incidunt qui repellendus veritatis dolor rem rerum quisquam, totam commodi? 
-            Fugiat libero error accusamus ipsum minima distinctio
+            Tot va començar fa 100 anys, amb una gran riada a Rubí. Els veïns varen muntar quadrilles de gent  
+            per afrontar el repte de l'aiguat, i desbrossar totes les restes de pi i matoll que la riera va 
+            arrossegar. Des d'aleshores, ens hem ajudat als veïns, i ens hi hem dedicat per vocació.
           </p>
         </div>        
       </div>
     </section>
+
+    <section id="contact">
+      <div class="container">
+        <a name="contactar"><p>Et volem coneixer...</p></a>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
+        <p>&nbsp</p>
+        <p>&nbsp</p>          
+        <p>&nbsp</p>        
+        <h2>CONTACTAR</h2>
+        <div class="row">
+          <!-- col-md-6 hace de las 12 partes de bootstrap, una col de 6 partes (el 50% del ancho) -->
+          <div class="col-md-6 topmargin-sm">
+            <p>Envii un Whatsapp al telf 666.666.666, o bé ompli aquest formulari i li contactarem:</p>
+          </div>
+          <!-- col-md-6 hace de las 12 partes de bootstrap, una col de 6 partes (el 50% del ancho) -->
+          <div class="col-md-6 topmargin-sm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="" placeholder="nom">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="" placeholder="cognoms">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <form class="form-group">
+                  <input type="email" class="form-control" id="" placeholder="email">
+                </form>
+              </div>
+              <div class="col-md-12">
+                <form class="form-group">
+                  <input type="number" class="form-control" id="" placeholder="telf">
+                </form>
+              </div>
+              <div class="col-md-12">
+                <form class="form-group">
+                  <input type="text" class="form-control" id="" placeholder="poblacio">
+                </form>
+              </div>
+              <div class="col-md-12">
+                <a href="#" class="btn btn-dark full-width">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        
 
     <section id="carousel-bootstrap">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -255,21 +310,21 @@
 
 
     <footer class="footer">
-      <p>Si vol contactar amb IT Academy, telf.932 917 610 o bé a les oficines Cibernarium, edifici MediaTIC</p>            
-      <p>Created under the mentoring of Barcelona Activa &#169; 2021 all rights reserved </p>   
+      <p>Created under the mentoring of IT Academy</p>            
+      <p>Bcn Activa &#169; 2021 all rights reserved </p>   
       <!-- el simbol del Copyright es pot fer amb &#169; o amb  &copy;   -->
     </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->    
-    
+    <!--     
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script> 
-   
+    -->
    
   </body>
 </html>
