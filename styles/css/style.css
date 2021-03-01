@@ -21,7 +21,7 @@ h2 {
     color: goldenrod;
     padding-right: 20px;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -44,7 +44,10 @@ section {
     box-shadow: 0 2px 4px 0 rgba(0,0,0, .05);
 }
 
-.navbar-toggler { font-size: 50px;}
+.navbar-toggler { 
+    font-size: 50px;
+    padding: 0;    
+}
 /* .navbar-toggler:focus {  } */
 
 .navbar-toggler:focus { 
@@ -63,8 +66,8 @@ section {
 }
 
 .logo-brand {
-    min-width: 70px;
-    max-width: 70px;
+    min-width: 50px;
+    max-width: 50px;
 }
 
 body > nav > div > a.navbar-brand > img {

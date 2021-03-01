@@ -39,41 +39,72 @@
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="assets/logo.png" class="logo-brand" alt="logo"></a>
-        <a id="titol">TOT HO TALLO</a>
 
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <ion-icon name="menu-outline"></ion-icon>
-          <!-- <span class="navbar-toggler-icon"></span> -->
+        <!-- 1. Logotip -->
+        <a class="navbar-brand col-xs-2" href="#"><img src="assets/logo.png" class="logo-brand" alt="logo"></a>
+
+        <!-- 2. Nom corporatiu -->
+        <a id="titol" class="col-xs-6">TOT HO TALLO</a>
+
+        <!-- 3. Icona usuari Registrar -->
+        <div class="col-xs-2">
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <!-- <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#miModal">
+            <ion-icon name="person-circle-outline"></ion-icon>            
+          </button>
+        </div>
+        <!-- 3.1. ocult: la finestra modal per Registrar -->
+        <div class="modal fade" id="miModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">hola</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- head modal -->
+
+              <!-- <modalhead class="modal-header">
+                <h4 class="modal-title">REGISTRE</h4>
+                <button type="button" class="close" data-dimiss="modal">&times;</button>
+              </modalhead> -->
+
+              <!-- body modal -->
+
+              <!-- <modalbody class="modal-body">
+                Lorem ipsum dolor sit amet, bla bla bla
+                Entra nombre usuario
+                Entra pwd
+                Repite pwd
+              </modalbody> -->
+
+              <!-- foot modal -->
+
+              <!-- <modalfoot class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
+              </modalfoot> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Burguer Menu desplegable -->
+        <button class="navbar-toggler col-xs-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <ion-icon name="menu-outline"></ion-icon>          
         </button>
       
+        <!-- 4.1. ocult: Menu desplegable del Burguer, que està colapsat (amagat per defecte) -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-          <!-- alinear a la esquerra ML-AUTO  -->
-          <ul class="navbar-nav ml-auto">
-          
-          <!-- abans estava a la dreta MR  -->
-          <!-- <ul class="navbar-nav mr-auto"> -->
-
-            <!-- <li class="nav-item active"> -->
-              <li class="nav-item">              
-
-              <a class="nav-link" href="#">Inici 
-                <!-- <span class="sr-only">(current)</span> -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#bones">Qui som?</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#serveis">Serveis</a>              
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contactar">Contactar</a>
-            </li>
+          <!-- alinear a la dreta ML-AUTO (posa a margin left respecte els divs anteriors) per defecte a la docum Bootstrap esta: mr-auto -->
+          <ul class="navbar-nav ml-auto">                      
+            <li class="nav-item">          <a class="nav-link" href="#"         >Inici</a>    </li>
+            <li class="nav-item">          <a class="nav-link" href="#bones"    >Qui som?</a> </li>
+            <li class="nav-item dropdown"> <a class="nav-link" href="#serveis"  >Serveis</a>  </li>
+            <li class="nav-item">          <a class="nav-link" href="#contactar">Contactar</a></li>
           </ul>
-        </div>
+        </div>        
       </div>
     </nav>
 
