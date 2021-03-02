@@ -2,6 +2,16 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+.header-bg {
+    background-color: rgb(74, 97, 74);
+}
+
+.logo-brand {
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 16px;
+}
+
 h1 {
     font-size: 70px;
     font-weight: 600;
@@ -63,15 +73,6 @@ section {
 
 .nav-link:hover {
     color: goldenrod
-}
-
-.logo-brand {
-    min-width: 50px;
-    max-width: 50px;
-}
-
-body > nav > div > a.navbar-brand > img {
-    border-radius: 16px;
 }
 
 #presenta {
