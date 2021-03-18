@@ -1,3 +1,11 @@
+.resaltado {
+    border: 1px solid pink;
+}
+
+.resaltadorojo {
+    border: 1px solid red;
+}
+
 body {
     font-family: 'Titillium Web', sans-serif;
 }
@@ -58,13 +66,40 @@ section {
     font-size: 50px;
     padding: 0;    
 }
-/* .navbar-toggler:focus {  } */
 
 .navbar-toggler:focus { 
     cursor: pointer; 
     /* Per eliminar la marca de Focus  */
     /* outline: none; */
     box-shadow: none; 
+}
+
+.dropdown-toggler:focus {
+    border-style: none;
+    box-shadow: none;
+    outline: none;
+
+}
+
+.dropdown-toggle::after{
+    content: none;
+}
+
+.btn-check:focus+.btn, .btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#icoUser{
+    font-size: 30px;
+}
+#navDreta > button.col-xs-1.dropdown.btn.dropdown-toggle.dropdown-toggle-split{
+    padding-bottom: 0;
+    padding-top: 12px;
+}
+
+#icoMenu{
+    font-size: 30px;
 }
 
 .nav-link {

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author"      content="Ignasi Ortiz">
-    <meta name="keywords"    content="bootstrap i navbar">
+    <meta name="keywords"    content="bootstrap i navbar i refactoring">
     <meta name="description" content="IT Academy - modul 6 Bootstrap"> 
 
     <!-- Bootstrap ... amb CDN (enllaços) ------------------------------------------  -->
@@ -28,50 +28,63 @@
     <!-- Ionicons web   -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
-    <title>Bootstrap exercise</title>
+    <title>Bootstrap exer Refactored</title>
 </head>
 
 <body>
-    <!-- NAV BAR de Bootstrap -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+    <!-- NAV BAR de Bootstrap ============ EXEMPLE MOLT IMPORTANT ===================================== -->
     <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
+      <!-- per estudiar posar-li classe 'resaltado' (pinta un borde rosa per definir els Divs) -->
+      <div class="container">
 
-        <!-- 1. Logotip -->
-        <a class="navbar-brand col-xs-2" href="#"><img src="assets/logo.png" class="logo-brand" alt="logo"></a>
+          <!-- logo + titol en un DIV a l'ESQUERRA (per estudiar, posar-li classe 'resaltadorojo') -->
+          <div id="navEsquerra" class="col-xs-6 col-lg-4 justify-content-start">
+              <!-- 1. Logotip -->
+              <a id="logot" class="navbar-brand col-xs-2" href="#"><img src="assets/logo.png" class="logo-brand" alt="logo"></a>
+              <!-- 2. Nom corporatiu -->
+              <a id="titol" class="col-xs-4">TOT HO TALLO</a>
+          </div>
 
-        <!-- 2. Nom corporatiu -->
-        <a id="titol" class="col-xs-6">TOT HO TALLO</a>
+          <!-- iconaUsuari + burguerMenu en un DIV a la DRETA (per estudiar, posar-li classe 'resaltadorojo') -->
+          <div id="navDreta" class="col-xs-6 col-lg-4 d-flex justify-content-end align-self-center"> 
 
-        <!-- 3. Icona usuari Registrar -->
-        <div class="col-xs-2">
-          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
-          <!-- <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation"> -->
-          <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#miModal">
-            <ion-icon name="person-circle-outline"></ion-icon>            
-          </button>
-        </div>               
+              <!-- 3. Dropdown boto-combo USUARI que pot desplegar persiana d'opcions Login i Registre -->
+              <button type="button" class="col-xs-1 dropdown btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                <ion-icon id="icoUser" name="person-circle-outline"></ion-icon>            
+              </button>
+              <!-- 3.1. ocult: persiana desplegable USUARI amb les 2 sub-opcions  -->
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" data-toggle="modal" data-target="#miModal">registre</a>
+                  <a class="dropdown-item">login</a>
+              </div>                
+              <!-- fi de punt 3, part de persiana dropdown USUARI --> 
 
-        <!-- 4. Burguer Menu desplegable -->
-        <button class="navbar-toggler col-xs-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <ion-icon name="menu-outline"></ion-icon>          
-        </button>
-      
-        <!-- 4.1. ocult: Menu desplegable del Burguer, que està colapsat (amagat per defecte) -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- 4. Botó del Burguer Menu -->
+              <button class="col-xs-1 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <ion-icon id="icoMenu" name="menu-outline"></ion-icon>          
+              </button>
 
-          <!-- alinear a la dreta ML-AUTO (posa a margin left respecte els divs anteriors) per defecte a la docum Bootstrap esta: mr-auto -->
-          <ul class="navbar-nav ml-auto">                      
-            <li class="nav-item">          <a class="nav-link" href="#"         >Inici</a>    </li>
-            <li class="nav-item">          <a class="nav-link" href="#bones"    >Qui som?</a> </li>
-            <li class="nav-item dropdown"> <a class="nav-link" href="#serveis"  >Serveis</a>  </li>
-            <li class="nav-item">          <a class="nav-link" href="#contactar">Contactar</a></li>
-          </ul>
-        </div>        
+          </div>
+          <!-- fi del navDreta -->
+
+          <!-- 4.1. ocult: persiana desplegable Burguer (amagat per defecte) Important: aquí fora del DIV Dreta -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- alinear a la dreta ML-AUTO (posa a margin left respecte els divs anteriors) per defecte a la docum Bootstrap esta: mr-auto --> 
+              <ul class="navbar-nav ml-auto">                      
+                  <li class="nav-item">          <a class="nav-link" href="#"         >Inici</a>    </li>
+                  <li class="nav-item">          <a class="nav-link" href="#bones"    >Nosaltres</a> </li>
+                  <li class="nav-item dropdown"> <a class="nav-link" href="#serveis"  >Serveis</a>  </li>
+                  <li class="nav-item">          <a class="nav-link" href="#contactar">Contactar</a></li>
+              </ul>
+          </div>  
+          <!-- fi de punt 4, part de menú que s'oculta BURGUER -->
       </div>
     </nav>
+    <!-- Fi de NAV BAR de Bootstrap ============ EXEMPLE MOLT IMPORTANT ================================== -->
 
-    <!-- 3.1. ocult:  finestra Modal REGISTRE (va fora etiq.header pq alla tenim un fixed-top) -->
+    <!-- Inici Finestres MODALS de Bootstrap === EXEMPLE MOLT IMPORTANT ================================== -->
+
+    <!-- 3.1.1 ocult:  finestra Modal REGISTRE (va fora etiqueta NAV pq alla hi tenim un fixed-top) -->
     <modal class="modal fade" id="miModal">
         <div class="modal-dialog">
             <div class="modal-content">
