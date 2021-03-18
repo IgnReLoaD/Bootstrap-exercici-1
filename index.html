@@ -54,8 +54,8 @@
               </button>
               <!-- 3.1. ocult: persiana desplegable USUARI amb les 2 sub-opcions  -->
               <div class="dropdown-menu">
-                  <a class="dropdown-item" data-toggle="modal" data-target="#miModal">registre</a>
-                  <a class="dropdown-item">login</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#regModal">registre</a>
+                  <a class="dropdown-item" data-toggle="modal" data-target="#logModal">login</a>
               </div>                
               <!-- fi de punt 3, part de persiana dropdown USUARI --> 
 
@@ -84,8 +84,8 @@
 
     <!-- Inici Finestres MODALS de Bootstrap === EXEMPLE MOLT IMPORTANT ================================== -->
 
-    <!-- 3.1.1 ocult:  finestra Modal REGISTRE (va fora etiqueta NAV pq alla hi tenim un fixed-top) -->
-    <modal class="modal fade" id="miModal">
+    <!-- 3.1.1 ocult:  finestra Modal REGISTRE (van fora etiqueta NAV pq alla hi tenim un fixed-top) -->
+    <modal class="modal fade" id="regModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <modalhead class="modal-header">
@@ -130,6 +130,40 @@
         </div>
     </modal>
     
+    <!-- 3.1.2 ocult:  finestra Modal LOGIN (van fora etiqueta NAV pq alla hi tenim un fixed-top) -->
+    <modal class="modal fade" id="logModal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <modalhead class="modal-header">
+                  <h4 class="modal-title">LOGIN</h4>
+                  <button type="button" class="close btn-danger" data-dismiss="modal">&times;</button>
+              </modalhead>
+              <modalbody class="modal-body">
+                <p>Entra les teves credencials:</p>                  
+                <div class="row">                    
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="inpLogin" class="text-dark">Usuari:</label>
+                      <input id ="inpLogin" type="text" class="form-control" placeholder="nickname">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="inpPswd" class="text-dark">Contrasenya:</label>
+                      <input id ="inpPswd" type="password" class="form-control" placeholder="password">
+                    </div>
+                  </div>                  
+                </div>
+              </modalbody>
+              <modalfoot class="modal-footer">
+                  <input type="submit" class="btn btn-success" data-dismiss="modal" value="   Log in   ">
+                  <input type="button" class="btn btn-primary" value="Recordar">
+              </modalfoot>
+          </div>
+      </div>
+  </modal>
+    <!-- Fi de Finestres MODALS de Bootstrap === EXEMPLE MOLT IMPORTANT ================================== -->
+
 
     <section id="presenta">
       <div class="container">
